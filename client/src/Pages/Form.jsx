@@ -145,14 +145,11 @@ export default function Form() {
         </div>
       </div>
 
-      {error && (
-        <div className="mb-4 p-3 bg-red-100 text-red-600 rounded-lg text-sm text-center">
-          {error}
-        </div>
-      )}
-
       {/* Right Side - Form */}
-      <form className="flex flex-col justify-center p-8 md:w-1/2" onSubmit={handleSubmit}>
+      <form
+        className="flex flex-col justify-center p-8 md:w-1/2"
+        onSubmit={handleSubmit}
+      >
         <div className="mx-auto w-full max-w-md space-y-8">
           <div className="space-y-2">
             <h2 className="text-2xl font-bold">Configure Your Assistant</h2>
@@ -162,8 +159,16 @@ export default function Form() {
           </div>
 
           {/* Profession and LLM Code Modification */}
+          {error && (
+            <div className="mb-4 p-3 bg-red-100 text-red-600 rounded-lg text-sm text-center">
+              {error}
+            </div>
+          )}
           <div className="space-y-2">
-            <label htmlFor="profession" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="profession"
+              className="block text-sm font-medium text-gray-700"
+            >
               Your profession and how you want to modify our LLM code
             </label>
             <textarea
@@ -178,7 +183,10 @@ export default function Form() {
 
           {/* Model Selection */}
           <div className="space-y-2">
-            <label htmlFor="modelType" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="modelType"
+              className="block text-sm font-medium text-gray-700"
+            >
               Select AI Model
             </label>
             <select
@@ -198,7 +206,10 @@ export default function Form() {
 
           {/* Style Selection */}
           <div className="space-y-2">
-            <label htmlFor="style" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="style"
+              className="block text-sm font-medium text-gray-700"
+            >
               Select Response Style
             </label>
             <select
@@ -220,7 +231,10 @@ export default function Form() {
 
           {/* Temperature Slider */}
           <div className="space-y-4">
-            <label htmlFor="temperature" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="temperature"
+              className="block text-sm font-medium text-gray-700"
+            >
               Response Style
             </label>
             <div className="space-y-2">
