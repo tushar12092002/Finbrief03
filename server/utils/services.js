@@ -45,6 +45,7 @@ module.exports = {
     if (preferences.modelType === "gemini-2.0-flash") {
       return geminiService.queryFinancialData(
         filePath,
+        userQuery,
         preferences.temperature,
         fullPrompt
       );
@@ -52,6 +53,7 @@ module.exports = {
     if (preferences.modelType === "mixtral-8x7b-32768") {
       return groqService.queryFinancialData(
         filePath,
+        userQuery,
         preferences.temperature,
         fullPrompt
       );
